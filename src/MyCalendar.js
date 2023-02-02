@@ -33,4 +33,10 @@ class MyCalendar extends Component {
     );
   }
 }
+let App = document.querySelector("#App");
+let event = App.querySelector("a");
+event.onclick = (e) => {
+  alert(e);
+};
+
 export default MyCalendar;
