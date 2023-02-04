@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 import "./MyCalendar.css";
 
 class MyCalendar extends Component {
@@ -9,7 +11,8 @@ class MyCalendar extends Component {
       <div className="App">
         <FullCalendar
           defaultView="dayGridMonth"
-          plugins={[dayGridPlugin]}
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          //headerToolbar{{}}
           events={[
             {},
             { title: "오늘은 캘린더 작성 날", date: "2023-02-01" },
