@@ -14,9 +14,24 @@ function MyCalendar() {
   //이벤트 하드 코딩
   const event = [
     {
-      title: "이벤트 버튼",
+      title: "치과 예약",
       start: "2023-02-03T08:00:00",
-      end: "2023-02-05T09:00:00",
+      end: "2023-02-03T09:00:00",
+    },
+    {
+      title: "예비군 당일",
+      start: "2023-02-03T08:00:00",
+      end: "2023-02-03T09:00:00",
+    },
+    {
+      title: "치과 예약",
+      start: "2023-02-03T08:00:00",
+      end: "2023-02-03T09:00:00",
+    },
+    {
+      title: "치과 예약",
+      start: "2023-02-03T08:00:00",
+      end: "2023-02-03T09:00:00",
     },
   ];
 
@@ -30,7 +45,7 @@ function MyCalendar() {
           center: "title", // 달력 개월 수
           end: "dayGridMonth,timeGridWeek,timeGridDay next", // 이번주 할일, 날짜 별 할일, 다음달
         }}
-        height={"30rem"}
+        height={"50rem"}
         events={event}
         //hover 시 해당 요소 Popover
         eventDidMount={(info) => {
@@ -41,15 +56,23 @@ function MyCalendar() {
             trigger: "hover",
             customClass: "popoverStyle",
             content:
-              "<p>안녕하세요 이것은 <strong>부트스트랩 Tip PopUp</strong>입니다.</p>",
+              "<p>안녕하세요 이것은 <strong>" +
+              info.event.title +
+              "</strong>에 대한 <strong>부트스트랩 Tip PopUp</strong>입니다.</p>",
             html: true,
           });
         }}
-        // 클릭 시 함수
-        eventClick={(e) => {
-          alert(e.event.start);
+        //일정 없이 date 클릭 시 함수 (클릭 시 일정 추가 부분 추가 예정)
+        dateClick={(info) => {
+          return new bootstrap.Modal(info.el, {});
         }}
+        // 이벤트 클릭 시 함수
+        // eventClick={(e) => {
+        //   alert(e.event.start);
+        // }}
         locales={"ko"} // 한글
+        editable={true} // 테이블 변경 권한
+        dayMaxEvents={true} // 달력에 해당 날짜 여러개 중첩시 + n 개 표시 클릭 시 모든 일정 표기
       />
     </div>
   );
