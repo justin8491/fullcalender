@@ -7,9 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./MyCalendar.css";
 
 //구동 전 설치 yarn 설정
+//yarn add 기본 fullcalendar 설치
 //yarn add @fullcalendar/timegrid
 //yarn add @fullcalendar/interaction
-//yarn add bootstrap
+//yarn add bootstrap //popover 사용 위함
 function MyCalendar() {
   //이벤트 하드 코딩
   const event = [
