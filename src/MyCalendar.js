@@ -57,9 +57,9 @@ function MyCalendar() {
             trigger: "hover",
             customClass: "popoverStyle",
             content:
-              "<p>안녕하세요 이것은 <strong>" +
-              info.event.title +
-              "</strong>에 대한 <strong>부트스트랩 Tip PopUp</strong>입니다.</p>",
+              "안녕하세요 이것은 " +
+              // info.event.title +
+              "에 대한 부트스트랩 Tip PopUp 입니다.",
             html: true,
           });
         }}

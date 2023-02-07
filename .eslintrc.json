@@ -1,6 +1,5 @@
 {
-  "extends": ["react-app", "plugin:prettier/recommended"]
-  // "parser": "@babel/eslint-parser",
-  // "parserOptions": { "requireConfigFile": "true" },
-  // "babelOptions": { "configFile": "./.babelrc" }
+  "parser": "@babel/eslint-parser",
+  "parserOptions": { "requireConfigFile": "true" },
+  "babelOptions": { "configFile": "./.babelrc" }
 }
